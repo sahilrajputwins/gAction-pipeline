@@ -8,5 +8,11 @@ jobs:
     
     - name: nginx installation
       run: |
-        sudo apt install nginx
-        sudo systemctl status nginx
+        if nginx -v; then
+          echo nginx already installed
+          sudo systemctl start nginx
+          sudo systemctl status nginx
+        else
+          sudo apt install nginx
+          sudo systemctl status nginx
+        fi

@@ -18,4 +18,4 @@ jobs:
         fi
     - name: Host index file
       run: |
-        sudo cp -f webapp/* /var/www/html
+        sudo cp -rf webapp/* /var/www/html

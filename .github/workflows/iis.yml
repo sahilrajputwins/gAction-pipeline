@@ -2,7 +2,7 @@ on: [push]
 
 jobs:
   build:
-    runs-on: self-hosted
+    runs-on: Windows
     steps:
     - uses: actions/checkout@v2
     

@@ -15,5 +15,4 @@ jobs:
         else
           sudo apt install nginx
           sudo systemctl status nginx
-          sudo systemctl stop nginx
         fi

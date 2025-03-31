@@ -1,0 +1,12 @@
+on: [push]
+
+jobs:
+  build:
+    runs-on: self-hosted
+    steps:
+    - uses: actions/checkout@v2
+    
+    - name: Host website on IIS
+      run: |
+        Remove-Item -Path "C:\inetpub\wwwroot\*" -Recurse -Force
+        Copy-Item -Path "webapp\*" -Destination "C:\inetpub\wwwroot" -Recurse -Force

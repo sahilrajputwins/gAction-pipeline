@@ -1,0 +1,12 @@
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    
+    - name: nginx installation
+      run: |
+        sudo apt install nginx
+        sudo systemctl status nginx

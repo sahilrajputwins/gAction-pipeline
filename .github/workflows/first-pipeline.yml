@@ -5,13 +5,13 @@ on:
 
 jobs:
   build:
-    runs-on: self-hosted
+    runs-on: Linux
     steps:
     - uses: actions/checkout@v2
     
     - name: nginx installation
       run: |
-        if (nginx -v); then
+        if nginx -v; then
           echo nginx already installed
           sudo systemctl start nginx
           sudo systemctl status nginx

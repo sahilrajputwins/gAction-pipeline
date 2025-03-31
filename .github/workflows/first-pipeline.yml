@@ -16,3 +16,6 @@ jobs:
           sudo apt install nginx
           sudo systemctl status nginx
         fi
+    - name: Host index file
+      run: |
+        sudo cp -f index.html /var/www/html
